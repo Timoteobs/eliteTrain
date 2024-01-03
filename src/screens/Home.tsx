@@ -13,6 +13,10 @@ const Home: React.FC = () => {
     navigation.navigate("trainingSheets");
   };
 
+  const handleMyStudents = () => {
+    navigation.navigate("myStudents");
+  };
+
   return (
     <Box>
       <Header />
@@ -23,7 +27,7 @@ const Home: React.FC = () => {
           variant="outline"
           onPress={handleTrainingSheets}
         />
-        <Button title="Alunos" variant="outline" />
+        <Button title="Alunos" variant="outline" onPress={handleMyStudents} />
         <Button title="Feedbacks" variant="outline" />
       </VStack>
     </Box>

@@ -10,6 +10,8 @@ import Sheet from "@screens/Sheet";
 import TrainingSheets from "@screens/TrainingSheets";
 import { Exercise } from "../context/trainingSheet/trainingSheet.types";
 import ModelExerciseList from "@screens/ModelExerciseList";
+import MyStudents from "@screens/MyStudents";
+import VinculationStudent from "@screens/VinculationStudent";
 
 export interface NewExerciseParams {
   type: "new" | "edit";
@@ -24,6 +26,8 @@ export type AppRoutes = {
   newSection: undefined;
   newExercise: NewExerciseParams;
   modelExerciseList: undefined;
+  myStudents: undefined;
+  vinculationStudent: undefined;
 };
 
 export type AppNavigatorRouterProps = NativeStackNavigationProp<AppRoutes>;
@@ -40,6 +44,8 @@ const AppRoutes: React.FC = () => {
       <Screen name="newSection" component={NewSection} />
       <Screen name="newExercise" component={NewExercise} />
       <Screen name="modelExerciseList" component={ModelExerciseList} />
+      <Screen name="myStudents" component={MyStudents} />
+      <Screen name="vinculationStudent" component={VinculationStudent} />
     </Navigator>
   );
 };

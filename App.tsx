@@ -14,6 +14,7 @@ import { LoadingProvider } from "./src/context/loading/loadingContext";
 import { TrainingSheetProvider } from "./src/context/trainingSheet/trainingSheetContext";
 import { ModelExerciseProvider } from "./src/context/modelExercise/modelExerciseContext";
 import { DashboardProvider } from "./src/context/dashboard/dashboardContext";
+import { VinculationProvider } from "./src/context/vinculation/vinculationContext";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Lato_400Regular, Lato_700Bold });
@@ -25,12 +26,14 @@ export default function App() {
           <TrainingSheetProvider>
             <ModelExerciseProvider>
               <DashboardProvider>
-                <StatusBar
-                  style="light"
-                  backgroundColor="transparent"
-                  translucent
-                />
-                {fontsLoaded ? <Routes /> : <View />}
+                <VinculationProvider>
+                  <StatusBar
+                    style="light"
+                    backgroundColor="transparent"
+                    translucent
+                  />
+                  {fontsLoaded ? <Routes /> : <View />}
+                </VinculationProvider>
               </DashboardProvider>
             </ModelExerciseProvider>
           </TrainingSheetProvider>
